@@ -1,0 +1,49 @@
+@import "./custom_colors";
+
+.auth{
+    background-color: $custom-purple;
+    min-height: calc(100% - 70px);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.column.is-4{
+    width: 100%;
+    max-width: 400px;
+}
+
+section#sec{
+    padding: 20px 10px;
+}
+
+.columns{
+    padding: 0px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+section.sectionAuth{
+    padding: 10px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#containerRegister{
+    padding: 10px 0;
+}
+
+.full{
+    width: 100%;
+}
+
+@media screen and (max-width: 768px){
+    #containerRegister{
+        max-width: 100%;
+        padding: 20px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}

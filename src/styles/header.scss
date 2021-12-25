@@ -1,0 +1,73 @@
+@import "./custom_colors";
+
+nav.navbar {
+  height: 70px;
+  border-bottom: 1px solid rgb(40,40,40);
+
+  #container{
+      height: 70px;
+  }
+
+  .navbar-brand {
+    align-items: center;
+    height: 70px;
+    img {
+      height: 40px;
+      margin: 15px 0;
+    }
+  }
+}
+
+.navbar-logged{
+  border-bottom: 0 !important;
+  position: relative!important;
+  z-index: 999!important;
+  .navbar-menu{
+    background-color: $custom-purple;  
+  }
+  .is-active{
+    background-color: $custom-purple;
+  }
+}
+
+button.my-button{
+  width: 45px;
+  height: 40px;
+  border-radius: 4px;
+  border: 1px solid white;
+  background-color: transparent;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.iconButtonMenu{
+  width: 18px !important;
+  height: 18px !important;
+}
+
+button.click{
+  background-color: white;
+  color: $custom-purple;
+}
+
+button.my-button:hover{
+  background-color: white;
+  color: $custom-purple;
+  box-shadow: white 0 0 6px 0px;
+}
+
+@media screen and (max-width: 1024px){
+  .navbar-item{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 768px){
+    .column{
+        text-align: center;
+    }
+}
