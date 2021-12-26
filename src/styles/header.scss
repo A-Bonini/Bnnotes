@@ -34,7 +34,7 @@ nav.navbar {
     background-color: $custom-purple;  
   }
   .is-active{
-    background-color: $custom-purple;
+    background-color: $custom-purple !important;
   }
 }
 
