@@ -8,6 +8,10 @@ nav.navbar {
       height: 70px;
   }
 
+  .is-active{
+    background-color: white !important;
+  }
+
   .navbar-brand {
     align-items: center;
     height: 70px;
@@ -16,6 +20,10 @@ nav.navbar {
       margin: 15px 0;
     }
   }
+}
+
+.is-active{
+  background-color: white !important;
 }
 
 .navbar-logged{
