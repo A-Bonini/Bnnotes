@@ -4,7 +4,6 @@ const UsersService = {
     register: (params) => Api.post('/users/register', params),
     login: async(params) => {
         const response = await Api.post('/users/login', params);
-        console.log(response);
         localStorage.setItem('user', JSON.stringify(response.data.user));
         localStorage.setItem('token', response.data.token);
     },

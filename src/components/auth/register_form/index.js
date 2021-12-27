@@ -1,5 +1,5 @@
 import React, { Fragment, useState } from 'react';
-import { Button, Field, Control, Input, Column, Section, Help, Label } from "rbx";
+import { Button, Field, Control, Input, Column, Section, Help, Label, Notification } from "rbx";
 import { useNavigate } from "react-router-dom";
 import UsersService from "../../../services/users";
 
@@ -9,13 +9,16 @@ function RegisterForm() {
     const [password, setPassword] = useState("");
     const [redirectToLogin, setRedirectToLogin] = useState(false);
     const [error, setError] = useState(false);
+    const [createAccountTrue, setCreateAccountTrue] = useState(false);
     let navigate = useNavigate();
 
     const HandleSubmit = async(evt) => {
         evt.preventDefault();
         try{
             const users = await UsersService.register({name: name, email: email,password: password});
-            setRedirectToLogin(true);
+            setCreateAccountTrue(true);
+            setTimeout(() => setRedirectToLogin(true), 4000);
+            
         }catch(error){
             setError(true)
         }
@@ -79,6 +82,7 @@ function RegisterForm() {
                     </Column.Group>
                   </Control>
                 </Field>
+                { createAccountTrue && <Notification color="success">Account created successfully</Notification>}
                 { error && <Help color="danger">Email or Password invalid</Help> }
               </Column>
             </form>
