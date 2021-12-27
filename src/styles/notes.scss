@@ -38,6 +38,14 @@
     cursor: pointer;
 }
 
+.button.is-custom-purple:active{
+    background-color: $custom-purple !important;
+}
+
+.button.is-custom-purple.is-active:hover{
+    background-color: $custom-purple !important;
+}
+
 .is-active{
     background-color: $custom-gray-light;
 }

@@ -43,12 +43,12 @@ const Notes = (props) => {
     }
 
     const updateNote = async (oldNote, params) => {
-        const updatedNote = await NotesService.update(oldNote._id, params);
-        const index = notes.indexOf(oldNote);
-        const newNotes = notes;
-        newNotes[index] = updatedNote.data;
-        setNotes(newNotes);
-        setCurrentNote(updatedNote.data);
+            const updatedNote = await NotesService.update(oldNote._id, params);
+            const index = notes.indexOf(oldNote);
+            const newNotes = notes;
+            newNotes[index] = updatedNote.data;
+            setNotes(newNotes);
+            setCurrentNote(updatedNote.data);
     }
 
     const searchNotes = async(query) => {
@@ -87,6 +87,7 @@ const Notes = (props) => {
                     <Editor 
                         note={current_note}
                         updateNote={updateNote}
+                        noteLenght={notes}
                     />
                 </Column>
             </Column.Group>

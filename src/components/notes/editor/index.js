@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react';
 
 import ReactQuill from 'react-quill'; // ES6
 import 'react-quill/dist/quill.snow.css'; // ES6
+import BloqComponent from '../bloq';
 
 function Editor(props) {
   const [currentContent, setCurrentContent] = useState('');
