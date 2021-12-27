@@ -38,6 +38,10 @@
     cursor: pointer;
 }
 
+.listItem.is-active{
+    background-color: #e4e4e4 !important;
+}
+
 .button.is-custom-purple:active{
     background-color: $custom-purple !important;
 }
