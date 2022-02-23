@@ -18,8 +18,9 @@ const Notes = (props) => {
     async function fetchNotes() {
         const response = await NotesService.index();
         if (response.data.length >= 1) {
-          setNotes(response.data.reverse())
-          setCurrentNote(response.data[0])
+          setNotes(response.data.reverse());
+          console.log(response.data.reverse());
+          setCurrentNote(response.data[0]);
         } else {
             setNotes([]);
         }
